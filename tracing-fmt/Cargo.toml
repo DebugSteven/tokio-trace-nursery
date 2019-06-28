@@ -1,0 +1,21 @@
+[package]
+name = "tracing-fmt"
+version = "0.1.0"
+authors = ["Eliza Weisman <eliza@buoyant.io>"]
+
+[features]
+default = ["ansi", "chrono"]
+ansi = ["ansi_term"]
+
+[dependencies]
+tracing-core = { version = "0.1", path = "../tracing-core" }
+ansi_term = { version = "0.11", optional = true }
+regex = "1"
+lazy_static = "1"
+owning_ref = "0.4.0"
+parking_lot = { version = "0.7"}
+lock_api = "0.1"
+chrono = { version = "0.4", optional = true }
+
+[dev-dependencies]
+tracing = { version = "0.1", path = "../tracing" }
